@@ -2,6 +2,8 @@
 
 A command-line client for [DefectDojo](https://github.com/DefectDojo/django-DefectDojo) API v2. Manage products, engagements, tests, findings, and more — all from the terminal.
 
+Built against **DefectDojo 2.57.2** (OpenAPI v3 schema). Compatible with DefectDojo API v2.
+
 ## Quick Start
 
 ```bash
