@@ -120,31 +120,64 @@ dd findings list --limit 20 --page 2 # Page 2, 20 per page
 
 ### Available Resources
 
-| Resource | CLI Name | Default Columns |
-|----------|----------|----------------|
+All 54 resources support `list`, `get`, `create`, `update` (PUT), `patch` (PATCH), `delete` by default. Resources marked † are deprecated (EOL 2026-06-01).
+
+| Resource | CLI Name | Default Table Columns |
+|----------|----------|----------------------|
 | Product Types | `product-types` | id, name, description, critical_product, key_product |
-| Products | `products` | id, name, description, prod_type, lifecycle, platform, findings_count |
-| Engagements | `engagements` | id, name, status, description, product, target_start, target_end |
-| Tests | `tests` | id, title, test_type, engagement, environment, branch_tag |
-| Test Types | `test-types` | id, name, static_tool, dynamic_tool |
-| Findings | `findings` | id, title, severity, status, test, found_by, date, cwe |
+| Products | `products` | id, name, description, prod_type, lifecycle, platform, findings_count, tags |
+| Engagements | `engagements` | id, name, status, description, product, target_start, target_end, lead |
+| Tests | `tests` | id, title, test_type, engagement, environment, branch_tag, created |
+| Test Types | `test-types` | id, name, static_tool, dynamic_tool, active |
+| Findings | `findings` | id, title, severity, status, test, found_by, date, mitigated, cwe, cvssv3_score |
 | Finding Templates | `finding-templates` | id, title, severity, description, cwe |
-| Endpoints | `endpoints` | id, host, port, protocol, product |
-| Endpoint Status | `endpoint-status` | id, endpoint, finding, mitigated, false_positive |
-| Users | `users` | id, username, email, is_active, is_superuser |
+| Endpoints | `endpoints` | id, host, port, protocol, product, findings_count |
+| Endpoint Status | `endpoint-status` | id, endpoint, finding, mitigated, false_positive, out_of_scope, risk_accepted |
+| Users | `users` | id, username, email, first_name, last_name, is_active, is_superuser, last_login |
 | Development Environments | `development-environments` | id, name |
+| Notes | `notes` | _(auto)_ |
+| Metadata | `metadata` | _(auto)_ |
+| Risk Acceptances | `risk-acceptance` | id, name, recommendation, decision, accepted_by, expiration_date |
 | JIRA Instances | `jira-instances` | id, url, username |
-| JIRA Projects | `jira-projects` | id, product, engagement, project_key, enabled |
-| JIRA Finding Mappings | `jira-finding-mappings` | id, jira_id, jira_key, finding |
+| JIRA Projects | `jira-projects` | id, product, engagement, project_key, enabled, push_all_issues |
+| JIRA Finding Mappings | `jira-finding-mappings` | id, jira_id, jira_key, finding, engagement |
 | SonarQube Issues | `sonarqube-issues` | id, key, status, type |
-| Tool Configurations | `tool-configurations` | id, name, tool_type, url |
+| SonarQube Transitions | `sonarqube-transitions` | _(auto)_ |
+| Tool Configurations | `tool-configurations` | id, name, tool_type, url, authentication_type |
+| Tool Product Settings | `tool-product-settings` | id, name, product, tool_configuration, tool_project_id |
 | Tool Types | `tool-types` | id, name, description |
 | Regulations | `regulations` | id, name, description |
 | Roles | `roles` | id, name |
 | Dojo Groups | `dojo-groups` | id, name, social_provider |
+| Dojo Group Members | `dojo-group-members` | id, group_id, user_id, role |
+| Global Roles | `global-roles` | id, user, group, role |
 | Product Members | `product-members` | id, product_id, user_id, role |
 | Product Groups | `product-groups` | id, product_id, group_id, role |
-| … and 30+ more | | |
+| Product Type Members | `product-type-members` | id, product_type_id, user_id, role |
+| Product Type Groups | `product-type-groups` | id, product_type_id, group_id, role |
+| API Scan Configurations | `product-api-scan-configs` | id, product, tool_configuration, service_key_1 |
+| App Analysis (Technologies) | `app-analysis` | id, product, name, version |
+| Credentials † | `credentials` | _(auto)_ |
+| Credential Mappings † | `credential-mappings` | _(auto)_ |
+| Stub Findings † | `stub-findings` | _(auto)_ |
+| System Settings | `system-settings` | _(auto)_ |
+| Announcements | `announcements` | _(auto)_ |
+| Notifications | `notifications` | _(auto)_ |
+| Notification Webhooks | `notification-webhooks` | _(auto)_ |
+| Languages | `languages` | _(auto)_ |
+| Language Types | `language-types` | _(auto)_ |
+| SLA Configurations | `sla-configurations` | id, name, critical, high, medium, low |
+| Network Locations | `network-locations` | _(auto)_ |
+| Engagement Presets | `engagement-presets` | _(auto)_ |
+| Test Imports | `test-imports` | _(auto)_ |
+| Configuration Permissions | `configuration-permissions` | _(auto)_ |
+| Request / Response Pairs | `request-response-pairs` | _(auto)_ |
+| User Contact Infos | `user-contact-infos` | _(auto)_ |
+| Questionnaire Answers | `questionnaire-answers` | _(auto)_ |
+| Answered Questionnaires | `questionnaire-answered-questionnaires` | _(auto)_ |
+| Engagement Questionnaires | `questionnaire-engagement-questionnaires` | _(auto)_ |
+| General Questionnaires | `questionnaire-general-questionnaires` | _(auto)_ |
+| Questionnaire Questions | `questionnaire-questions` | _(auto)_ |
 
 ### Scan Import
 
