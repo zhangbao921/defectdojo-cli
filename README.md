@@ -18,6 +18,102 @@ dd engagements list
 dd findings get 42 -o json
 ```
 
+## Quick Reference
+
+```
+dd --help
+```
+
+```
+A command-line client for DefectDojo API v2.
+Manage products, engagements, tests, findings, and more.
+
+Usage:
+  dd [command]
+
+Available Commands:
+  announcements                           Manage announcements
+  app-analysis                            Manage application analyses
+  celery                                  Check Celery task status
+  completion                              Generate the autocompletion script for the specified shell
+  configuration-permissions               Manage configuration permissions
+  credential-mappings                     Manage credential mappings
+  credentials                             Manage credentials
+  development-environments                Manage development environments
+  dojo-group-members                      Manage dojo group members
+  dojo-groups                             Manage dojo groups
+  endpoint-meta-import                    Import endpoint metadata
+  endpoint-status                         Manage endpoint status
+  endpoints                               Manage endpoints
+  engagement-checklist                    Get or update engagement checklist
+  engagement-close                        Close an engagement
+  engagement-notes                        List or add notes to an engagement
+  engagement-presets                      Manage engagement presets
+  engagement-reopen                       Reopen an engagement
+  engagements                             Manage engagements
+  finding-close                           Close a finding
+  finding-duplicate                       Get duplicate cluster for a finding
+  finding-metadata                        Get finding metadata
+  finding-notes                           List or add notes to a finding
+  finding-tags                            Manage finding tags
+  finding-templates                       Manage finding templates
+  finding-verify                          Verify a finding
+  findings                                Manage findings
+  global-roles                            Manage global roles
+  help                                    Help about any command
+  import-languages                        Import languages for a product
+  import-scan                             Import a scan report into an engagement
+  jira-finding-mappings                   Manage JIRA finding mappings
+  jira-instances                          Manage JIRA instances
+  jira-projects                           Manage JIRA projects
+  language-types                          Manage language types
+  languages                               Manage languages
+  metadata                                Manage metadata
+  network-locations                       Manage network locations
+  notes                                   Manage notes
+  notification-webhooks                   Manage notification webhooks
+  notifications                           Manage notifications
+  product-api-scan-configs                Manage API scan configs
+  product-groups                          Manage product groups
+  product-members                         Manage product members
+  product-type-groups                     Manage product type groups
+  product-type-members                    Manage product type members
+  product-types                           Manage product types
+  products                                Manage products
+  questionnaire-answered-questionnaires   Manage answered questionnaires
+  questionnaire-answers                   Manage questionnaire answers
+  questionnaire-engagement-questionnaires Manage engagement questionnaires
+  questionnaire-general-questionnaires    Manage general questionnaires
+  questionnaire-questions                 Manage questionnaire questions
+  regulations                             Manage regulations
+  reimport-scan                           Re-import a scan report to update an existing test
+  request-response-pairs                  Manage request/response pairs
+  risk-acceptance                         Manage risk acceptances
+  roles                                   Manage roles
+  scan                                    Quick scan: auto-create product + engagement + import scan
+  sla-configurations                      Manage SLA configurations
+  sonarqube-issues                        Manage SonarQube issues
+  sonarqube-transitions                   Manage SonarQube transitions
+  stub-findings                           Manage stub findings
+  system-settings                         Manage system settings
+  test-imports                            Manage test imports
+  test-types                              Manage test types
+  tests                                   Manage tests
+  tool-configurations                     Manage tool configurations
+  tool-product-settings                   Manage tool product settings
+  tool-types                              Manage tool types
+  user-contact-infos                      Manage user contact infos
+  user-profile                            Get current user profile
+  user-reset-token                        Reset user API token
+  users                                   Manage users
+
+Flags:
+      --api-key string   API key (env: DD_API_KEY)
+  -h, --help             help for dd
+      --host string      DefectDojo host URL (env: DD_HOST)
+  -o, --output string    Output format: table, json, yaml (default "table")
+```
+
 ## Installation
 
 ```bash
